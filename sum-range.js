@@ -1,10 +1,16 @@
 function range(start, end, step = 1) {
   // Add code.
-}
+  var arr = [];
+  for (var i = start; step > 1 || step === undefined ? i <= end : i >= end; step ? i = i + step : i++)
+  arr.push(i);
+return arr;
+};
 
-function sum(numbers) {
-  // Add code.
-}
+var sum = function(arr) {
+  return arr.reduce(function(x, y) {
+      return x + y;
+  });
+};
 
 
 

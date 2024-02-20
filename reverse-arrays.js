@@ -1,9 +1,22 @@
 function reverseArray(arr) {
   // Add code.
+  var reversedArray = [];
+
+  while( i = array.pop() )
+  reversedArray.push( i );
+
+  return reversedArray;
 }
 
 function reverseArrayInPlace(arr) {
   // Add code.
+  function reverseArrayInPlace(array) {
+    for(var i = 0; i < Math.floor( array.length/2 ); i++) {
+      var temp = array [i];
+      array[i] = array[array.length - 1 - i];
+      array[array.length - 1 - i] = temp;
+    }
+  }
 }
 
 

@@ -1,9 +1,31 @@
-function arrayToList(arr) {
-  // Add code.
+function arrayToList(array) {
+  let result = {};
+  if (Array.isArray(array)) {
+    let list = null;
+    array = array.reverse();
+    for (let item of array) {
+      list = {
+        value: item,
+        rest: list
+      };
+    }
+    result = list;
+  }
+  return result;
 }
 
-function listToArray(list, arr) {
-  // Add code.
+function listToArray(list) {
+  let result = [];
+  if (typeof list === 'undefined' || list.value === undefined || list.rest === undefined) {
+    return result;
+  } else {
+    for (let node = list; node; node = node.rest) {
+      if (node.hasOwnProperty('value')) {
+        result.push(node.value);
+      }
+    }
+  }
+  return result;
 }
 
 // tests
